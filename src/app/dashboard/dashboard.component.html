@@ -8,69 +8,220 @@
         </div>
     </nav>
     <div class="sidebar">
-        <a href="#" class="active mb-2 pt-2 pb-2 mt-2">
+        <a href="#" class="active p-2">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-2">
                 <i class="fa fa-home"></i>
             </div>
-            <div class="col-lg-6" *ngIf="showMenu">
-                <p>Dashboard</p>
-            </div>
+            <div class="col-lg-8" *ngIf="showMenu">Dashboard</div>
         </div>
         </a>
-        <a href="#" class="active mb-2 pt-2 pb-2 mt-2"><i class="fa fa-home"></i><ng-container *ngIf="showMenu">Dashboard</ng-container></a>
-        <a (click)="drop1 = !drop1; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-cog"></i><ng-container *ngIf="showMenu">Components</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop1 && showMenu">
-            <a>Mail</a>
-            <a>Timeline</a>
-            <a>Tree View</a>
-        </ng-container>
-        <a (click)="drop2 = !drop2; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-bar-chart"></i><ng-container *ngIf="showMenu">Charts</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop2 && showMenu">
-            <a>amCharts</a>
-            <a>Chartist</a>
-            <a>Chart.js</a>
-            <a>Morris</a>
-        </ng-container>
-        <a (click)="drop3 = !drop3; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-desktop"></i><ng-container *ngIf="showMenu">UI Features</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop3 && showMenu">
-            <a>Typography</a>
-            <a>Buttons</a>
-            <a>Icons</a>
-            <a>Modals</a>
-            <a>Grid</a>
-            <a>Alerts</a>
-            <a>Progress Bars</a>
-            <a>Notifications</a>
-            <a>Tabs & Accordians</a>
-            <a>Sliders</a>
-            <a>Panels</a>
-        </ng-container>
-        <a (click)="drop4 = !drop4; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-pencil-square-o"></i><ng-container *ngIf="showMenu">Form Elements</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop4 && showMenu">
-            <a>Form Inputs</a>
-            <a>Form Layouts</a>
-            <a>Form Wizard</a>
-        </ng-container>
-        <a (click)="drop5 = !drop5; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-th"></i><ng-container *ngIf="showMenu">Tables</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop5 && showMenu">
-            <a>Basic Tables</a>
-            <a>Smart Tables</a>
-        </ng-container>
-        <a (click)="drop6 = !drop6; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-map-marker"></i><ng-container *ngIf="showMenu">Maps</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop6 && showMenu">
-            <a>Google Maps</a>
-            <a>Leaflet Maps</a>
-            <a>Bubble Maps</a>
-            <a>Line Maps</a>
-        </ng-container>
-        <a (click)="drop7 = !drop7; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-file-o"></i><ng-container *ngIf="showMenu">Pages</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
-        <ng-container *ngIf="drop7 && showMenu">
-            <a>Sign In</a>
-            <a>Sign Up</a>
-            <a>User Profile</a>
-            <a>404 Page</a>
-        </ng-container>
+        <a (click)="drop1 = !drop1; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-cog"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Components</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop1 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Mail</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Timeline</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Tree View</a></div>
+            </div>
+        </div>
+
+        <a (click)="drop2 = !drop2; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Charts</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop2 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>amCharts</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Chartlist</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Chart.js</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Morris</a></div>
+            </div>
+        </div>
+
+        <a (click)="drop3 = !drop3; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-desktop"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">UI Features</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop3 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Typography</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Buttons</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Icons</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Modals</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Grid</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Alerts</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Progress Bars</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Notifications</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Tabs & Accordians</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Sliders</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Panels</a></div>
+            </div>
+        </div>
+        
+        <a (click)="drop4 = !drop4; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-pencil-square-o"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Form Elements</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop4 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Form Inputs</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Form Layouts</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Form Wizard</a></div>
+            </div>
+        </div>
+
+        <a (click)="drop5 = !drop5; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-th"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Tables</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop5 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Basic Tables</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Smart Tables</a></div>
+            </div>
+        </div>
+
+        <a (click)="drop6 = !drop6; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Maps</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop6 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Google Maps</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Leaflet Maps</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Bubble Maps</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Line Maps</a></div>
+            </div>
+        </div>
+        <a (click)="drop7 = !drop7; checkmenu()" class="p-2">
+            <div class="row">
+                <div class="col-lg-2">
+                    <i class="fa fa-file-o"></i>
+                </div>
+                <div class="col-lg-8" *ngIf="showMenu">Pages</div>
+                <div class="col-lg-2" *ngIf="showMenu"><i class="fa fa-caret-down" ></i></div>
+            </div>
+        </a>
+        <div *ngIf="drop7 && showMenu">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Sign In</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>Sign Up</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>User Profile</a></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"><a>404 Page</a></div>
+            </div>
+        </div>
     </div>
     <div class="content">
         <div class="row">
