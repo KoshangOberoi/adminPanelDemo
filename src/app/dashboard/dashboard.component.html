@@ -1,0 +1,117 @@
+<div> 
+    <nav class="navbar navbar-light" style="position: sticky; background-color: #1C2B36; top: 0; min-height: 60px;">
+        <a class="navbar-brand" href="#">
+            <img src="assets\logo.png" alt="logo" style="position: absolute;width: 200px; height: auto; top: 0; left: 0;">
+        </a>
+        <div class="togglebar" (click)="showMenu = !showMenu">
+            <h3><i class="fa fa-bars text-white pt-3" style="position: absolute; top: 0; left: 220px;"></i></h3>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <a href="#" class="active mb-2 pt-2 pb-2 mt-2">
+        <div class="row">
+            <div class="col-lg-3">
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="col-lg-6" *ngIf="showMenu">
+                <p>Dashboard</p>
+            </div>
+        </div>
+        </a>
+        <a href="#" class="active mb-2 pt-2 pb-2 mt-2"><i class="fa fa-home"></i><ng-container *ngIf="showMenu">Dashboard</ng-container></a>
+        <a (click)="drop1 = !drop1; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-cog"></i><ng-container *ngIf="showMenu">Components</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop1 && showMenu">
+            <a>Mail</a>
+            <a>Timeline</a>
+            <a>Tree View</a>
+        </ng-container>
+        <a (click)="drop2 = !drop2; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-bar-chart"></i><ng-container *ngIf="showMenu">Charts</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop2 && showMenu">
+            <a>amCharts</a>
+            <a>Chartist</a>
+            <a>Chart.js</a>
+            <a>Morris</a>
+        </ng-container>
+        <a (click)="drop3 = !drop3; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-desktop"></i><ng-container *ngIf="showMenu">UI Features</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop3 && showMenu">
+            <a>Typography</a>
+            <a>Buttons</a>
+            <a>Icons</a>
+            <a>Modals</a>
+            <a>Grid</a>
+            <a>Alerts</a>
+            <a>Progress Bars</a>
+            <a>Notifications</a>
+            <a>Tabs & Accordians</a>
+            <a>Sliders</a>
+            <a>Panels</a>
+        </ng-container>
+        <a (click)="drop4 = !drop4; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-pencil-square-o"></i><ng-container *ngIf="showMenu">Form Elements</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop4 && showMenu">
+            <a>Form Inputs</a>
+            <a>Form Layouts</a>
+            <a>Form Wizard</a>
+        </ng-container>
+        <a (click)="drop5 = !drop5; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-th"></i><ng-container *ngIf="showMenu">Tables</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop5 && showMenu">
+            <a>Basic Tables</a>
+            <a>Smart Tables</a>
+        </ng-container>
+        <a (click)="drop6 = !drop6; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-map-marker"></i><ng-container *ngIf="showMenu">Maps</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop6 && showMenu">
+            <a>Google Maps</a>
+            <a>Leaflet Maps</a>
+            <a>Bubble Maps</a>
+            <a>Line Maps</a>
+        </ng-container>
+        <a (click)="drop7 = !drop7; checkmenu()" class="mb-2 pt-2 pb-2"><i class="fa fa-file-o"></i><ng-container *ngIf="showMenu">Pages</ng-container><i class="fa fa-caret-down dropdown" ></i></a>
+        <ng-container *ngIf="drop7 && showMenu">
+            <a>Sign In</a>
+            <a>Sign Up</a>
+            <a>User Profile</a>
+            <a>404 Page</a>
+        </ng-container>
+    </div>
+    <div class="content">
+        <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 pt-3 ps-5">
+                    <h4 style="color: #666;">DASHBOARD</h4>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 pt-3">
+                    <h6 style="position: absolute; right: 40px;">Home / Dashboard</h6>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="ms-5 box p-2">
+                <div style="position: relative;">
+                    <h6>New Visits<span style="position: absolute; right: 0;"><i class="fa fa-user"></i></span></h6>
+                </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="me-5 box p-2">
+                <div style="position: relative;">
+                    <h6>Purchases<span style="position: absolute; right: 0;"><i class="fa fa-usd"></i></span></h6>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="ms-5 box p-2">
+                <div style="position: relative;">
+                    <h6>Active Users<span style="position: absolute; right: 0;"><i class="fa fa-smile-o"></i></span></h6>
+                </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="me-5 box p-2">
+                <div style="position: relative;">
+                    <h6>Revisited<span style="position: absolute; right: 0;"><i class="fa fa-repeat"></i></span></h6>
+                </div>
+            </div>
+            </div>
+        </div>      
+    </div>
+</div>
